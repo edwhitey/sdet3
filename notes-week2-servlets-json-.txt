@@ -1,0 +1,101 @@
+skeleton = java/db etc
+stub = client
+connection from stub to skeleton
+
+RMI   remote method invocation
+CLI command line interface
+
+3 tier architecture
+client / java / db   all separate physical systems
+
+http 1.1   stateless request
+
+DIP  Deep Inspection of Packet
+
+Java wrapped by App Server which is what IE etc communicates through, handles the packets and connections
+
+URI uniform resource indicator (intra) within app server
+URL uniform resource locator (inter)
+
+HttpServlet
+
+
+there is an Interface called Servelet written by SUN that everyone implements
+
+third party vendors implement:   class HttpServlet implements Servlet{
+				public void doGet{HrrpServletRequest req, HttpServletResponse rsp)
+
+developer extends HttpServlet
+
+if a class extends HttpServlet it is just called a Servlet
+
+DD deployment descriptor web.xml  entry is made via xml to locate the class 
+
+
+
+
+website vs webservice
+site is human to computer
+service is ocmputer to computer
+
+xml
+<? ...?>   first item is known as the processing statement has ? at start/end not even a space the xml ver should be first
+
+
+SAX 	Simple API for XML     line by line parser but stores nothing
+DOM  	Document Object Module   sucks entire xml in
+SOAP	Simple object access protocol
+WSDL 	web services description language
+UDDI 	universal description discovery and integration
+STAX  	stream api for xml
+
+much simpler than xml, not needing all the element codes:
+JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999.
+
+
+look up HTTP status codes on wikipedia
+
+ORM 	object relational mapping
+
+POJO 	plain old java object
+POX	plain old XML
+
+RESTful uses JSON		or text or xml
+JSONP  json with acknowledgement
+
+HATEOAS  	hypermedia as the engine of application state
+
+richardson maturity levels for REST
+l0  	body all details
+l1  	individual uri for each resource
+l2	use the right http methods, status codes
+l3	respones have links that client can use  -- fully RESTful service
+
+	
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+
+http://localhost:8081/DynamicWorks/   ==== tomcat
+http://localhost:8081/DynamicWorks/hi => 404
+http://localhost:8081/DynamicWorks/resources*  ===> get => all msgs   (richardson maturity model 2)
+http://localhost:8081/DynamicWorks/resources   ==> get => all msgs
+http://localhost:8081/DynamicWorks/resources/message/1  ==> get message with id 1
+http://localhost:8081/DynamicWorks//resources/message/1/comments	==> get all commens of message id 1
+http://localhost:8081/DynamicWorks//resources/message/1/comments/3 	==> get comment 3 of message id 1
+
+
+ARC 	advanced REST client
+	GET  get data
+	POST   insert
+	PUT	update
+	DELETE
+
+
+Service Objects are static so not making new objects each time and overload system
+
+
+JAXB   java api for xml and beans
+
+
+
+
